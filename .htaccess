@@ -1,0 +1,23 @@
+DirectoryIndex loginku.php
+
+RewriteEngine on
+
+RewriteRule ^register$ formdaftarku.php
+RewriteRule ^login$ loginku.php
+RewriteRule ^load$ periksaloginku.php
+
+
+
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+</IfModule>
+
+
+ErrorDocument 404 https://subdomainmaker.deliserdangkab.go.id/404.html
+
+
+options all -indexes
